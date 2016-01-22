@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		Time and Color
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<style>
+			#message_panel {
+    		padding: 10px;
+    		display: none;
+			}
+		</style>
+  </head>
+
+<body>
+<form name="login_form">
+Input User Name: <input type='text' name="user_id" size=15 maxsize=10 value='' >
+<br>
+Input Password:  <input type='password' name="password" size=15 maxsize=10 value=''>
+<br>
+<input type="button" onclick="check(this.form)" value="Login">
+<input type="reset" value="Cancel">
+</form>
+<div id="message_panel"> <p id="message" sytle="font_size: 15"></p></div>
+
+<script>
+function check(form)
+{
+	if (form.user_id.value == "myID" && form.password.value == "Pass")
+	{
+		document.getElementById("message").innerHTML = "Correct Login Information";
+		$("#message_panel").fadeIn("slow");
+	}
+	else
+	{
+		document.getElementById("message").innerHTML = "Incorrect Login Information";
+		$("#message_panel").fadeIn("slow");
+	}
+};
+</script>
+
+</body>
+</html>
+
+

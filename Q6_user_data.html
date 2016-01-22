@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Read user data</h1>
+<b>OS:</b>
+<p id="OS"></p>
+<b>Browser:</b>
+<p id="browser"></p>
+<b>Window Size:</b>
+<p id="window_size"></p>
+
+<script>
+//check OS
+if (window.navigator["appVersion"].search("Win16") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows 3.11";
+}
+else if (window.navigator["appVersion"].search("Windows 95") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows 95";
+}
+else if (window.navigator["appVersion"].search("Windows 98") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows 98";
+}
+else if (window.navigator["appVersion"].search("Windows NT 5.0") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows 2000";
+}
+else if (window.navigator["appVersion"].search("Windows ME") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows ME";
+}
+else if (window.navigator["appVersion"].search("Windows NT 5.1") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows XP";
+}
+else if (window.navigator["appVersion"].search("Windows NT 5.2") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows Server 2003";
+}
+else if (window.navigator["appVersion"].search("Windows NT 6.0") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows Vista";
+}
+else if (window.navigator["appVersion"].search("Windows NT 6.1") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Windows 7";
+}
+else if (window.navigator["appVersion"].search("OpenBSD") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Open BSD";
+}
+else if (window.navigator["appVersion"].search("SunOS") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Sun OS";
+}
+else if (window.navigator["appVersion"].search("Linux") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Linux";
+}
+else if (window.navigator["appVersion"].search("Macintosh") >= 0)
+{
+    document.getElementById("OS").innerHTML = "Mac OS";
+}
+
+// check browser
+if (window.navigator["userAgent"].search("Chrome") >= 0)
+{
+    document.getElementById("browser").innerHTML = "Chrome";
+}
+else if (window.navigator["userAgent"].search("NET") >= 0)
+{
+    document.getElementById("browser").innerHTML = "Internet Explorer";
+}
+else if (window.navigator["userAgent"].search("Firefox") >= 0)
+{
+    document.getElementById("browser").innerHTML = "Firefox";
+}
+else if (window.navigator["userAgent"].search("Safari") >= 0)
+{
+    document.getElementById("browser").innerHTML = "Safari";
+}
+
+document.getElementById("window_size").innerHTML = $(window).height() + " x " + $(window).width();
+
+$(window).resize(function() {
+  alert("Window resized!");
+});
+</script>
+
+</body>
+</html> 
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+.menupanel{
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: 10px solid 1px #c3c3c3;
+    width: 150px;
+    margin-right: 50px;
+}
+
+.slidepanel{
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    display: none;
+    width: 120px;
+    margin: auto;
+}
+
+.spacepanel{
+    padding: 5px;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 150px;
+    margin-right: 40px;
+}
+}
+</style>
+</head>
+<body>
+
+<button id="File" class="menupanel" onmouseover="file_menu_d()" onmouseout="file_menu_u()">File</button>
+<button id="Help" class="menupanel" onclick="pop_about()">Help</button>
+<button id="View" class="menupanel" onmouseover="view_menu_d()" onmouseout="view_menu_u()">View</button>
+<br>
+<table>
+<tr>
+<td>
+<div id="file_open", class="slidepanel">Open File...</div>
+<div id="file_save", class="slidepanel">Save File...</div>
+</td>
+<td>
+<div id="view_space", class="spacepanel"></div>
+</td>
+<td>
+<div id="view_space", class="spacepanel"></div>
+</td>
+<td>
+<div id="view_show", class="slidepanel">View All</div>
+<div id="view_hide", class="slidepanel">Hide All</div>
+</td>
+</tr>
+</table>
+
+<script>
+function file_menu_d()
+{
+   $("#file_open").slideDown("fast");
+   $("#file_save").slideDown("fast");
+};
+function file_menu_u()
+{
+   $("#file_open").slideUp("fast");
+   $("#file_save").slideUp("fast");
+};
+function view_menu_d()
+{
+   $("#view_show").slideDown("fast");
+   $("#view_hide").slideDown("fast");
+};
+function view_menu_u()
+{
+   $("#view_show").slideUp("fast");
+   $("#view_hide").slideUp("fast");
+};
+function pop_about()
+{
+   alert("This is a navigation bar");
+};
+</script>
+
+</body>
+</html>

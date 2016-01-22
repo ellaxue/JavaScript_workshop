@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		Time and Color
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+<body>
+	<div id="clock">
+		<span id="hours", style="color:red"></span>
+		<span, style="color:red"> : </span>
+		<span id="minutes", style="color:red"></span>
+		<span, style="color:red"> : </span>
+		<span id="seconds", style="color:red"></span>
+		<span, style="color:red"> . </span>
+		<span id="milliseconds", style="color:red"></span>
+	</div>
+
+<script>
+$(document).ready(function(){
+
+  setInterval(function(){
+    var dateTime = new Date();
+    var minutesTwoDigitsWithLeadingZero = ("0" + dateTime.getMinutes()).substr(-2);
+    $("#milliseconds").text(dateTime.getMilliseconds());
+    $("#seconds").text(dateTime.getSeconds());
+    $("#minutes").text(minutesTwoDigitsWithLeadingZero);
+    $("#hours").text(dateTime.getHours());
+    if (dateTime.getMinutes() % 2 == 0)
+		{
+			document.body.style.background = "black";
+		}
+    else
+		{
+			document.body.style.background = "yellow";
+		}
+  },100)
+});
+</script>
+
+</body>
+</html>
+
